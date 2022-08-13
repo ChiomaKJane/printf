@@ -23,7 +23,15 @@ int _printf(const char *format, ...)
 					printed += print_char(args);
 					i += 2;
 					break;
-					
+				case '%':
+					_putchar('%');
+					printed++;
+					i += 2;
+					break;
+				case 's':
+					printed += print_string(args);
+					i += 2;
+					break;
 				default:
 					_putchar(format[i]);
 					_putchar(format[i + 1]);
