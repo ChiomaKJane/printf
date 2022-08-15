@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int printed = 0;
 	va_list args;
-	va_start (args, format);
 
-	while(format[i])
+	va_start(args, format);
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
@@ -37,7 +37,6 @@ int _printf(const char *format, ...)
 					_putchar(format[i + 1]);
 					i += 2;
 					break;
-			
 			}
 		}
 
